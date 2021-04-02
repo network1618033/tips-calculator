@@ -1,0 +1,83 @@
+<!-- 
+    Programmeur : Jonathan ZOGONA et Joel Boudreau
+    Date : 12 Décembre 2019
+    Fichier : index.html 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pourboire</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/css/bootstrap-select.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/bootstrap-select.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.js"></script>
+    
+    <script type="text/javascript" src="js/index.js" > </script>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Pourboire</h1>
+        <div id="calculator">
+            <form>
+                <p>
+                    <label id="lblMontant" for="txtMontant">Quelle est le montant de votre facture?</label>
+                </p>
+                <p>
+                    $ <input id="txtMontant" name="txtMontant" type="text" placeholder="Montant payé" required>
+                    <span id="error-message-mont-icon"><i class="fas fa-exclamation-circle"></i></span>
+                </p>
+                <p>
+                    <label id="lblService" for="ddlServiceQual">Comment était le service?</label>
+                </p>
+                <p>
+                    <select name="ddlServiceQual" id="ddlServiceQual" class="selectpicker" data-style="btn-info">
+                        <option value="0">-- Choisir une option --</option>
+                        <option value="0.3">30% - Incroyable</option>
+                        <option value="0.2">20% - Bon</option>
+                        <option value="0.15">15% - Correcte</option>
+                        <option value="0.1">10% - Mauvais</option>
+                        <option value="0.05">5% - Terrible</option>
+                    </select>
+                    <span id="error-message-qual-icon"><i class="fas fa-exclamation-circle"></i></span>
+                </p>
+                <p>
+                    <label id="lblPersonnes" for="txtPersonnes">Combien de personnes partagent la facture?</label>
+                </p>
+                <input id="txtPersonnes" data-slider-id='txtPersonnesSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/>
+                <span id="error-message-nobr-icon"><i class="fas fa-exclamation-circle"></i></span>
+            
+                <button type="button" class="btn btn-warning" id="btnCalculer" onclick="calculerTips(this.form);" >Calculer</button>
+
+            </form>
+        </div>
+    
+        <div id="totalTip">
+            <sup>$</sup><span id="tip">0.00</span>
+            <small id="each">chacun</small>
+        </div>
+    </div>
+
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,194 @@
+/* 
+    Programmeur : Jonathan ZOGONA et Joel Boudreau
+    Date : 12 Décembre 2019
+    Fichier : style.html  
+*/
+
+
+
+body {
+  font-family: Roboto, serif;
+  color : #444444;
+  background-image : linear-gradient(105deg, rgba(5, 5, 5, 0.521), rgba(5, 5, 5, 0.521),
+  transparent), url(../img/background.jpg);;
+  background-size: cover;
+  margin: 1px;
+}
+
+#container {
+  position: absolute;
+  top : 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 550px;
+  width: 670px;
+  margin: 100px auto;
+  
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%,
+  transparent 50%), url(../img/pourboire.jpg);
+
+  background-size: cover;
+
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+
+h1 {
+  background: #17a3b8e5;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 15px 100px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+p {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+form input[type="text"] {
+  width:90px;
+}
+
+input {
+  padding-left: 20px;
+}
+
+
+#txtMontant {
+  width: 35%;
+  padding: 5px 5px 8px 8px;
+  margin-left: 30px;
+  font-size: 20px;
+  font-family: inherit;
+  color: inherit;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: all .3s;
+}
+
+#txtMontant{
+  margin-left: 0px;
+}
+
+#txtMontant:focus {
+  background: #fff;
+  border-bottom: 3px solid #0985e3e5;
+  box-shadow: 0 10px 20px rgba(#000, .1);
+  outline: none;
+  border-radius: 2px;
+}
+
+#txtMontant:focus:invalid{
+    border:none;
+    border-bottom: 3px solid red;
+}
+
+.dollarSign {
+  display: inline;
+}
+
+#ddlServiceQual {
+  margin-left: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#btnCalculer {
+  display: block;
+  margin: 20px 30px;
+  width: 180px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 25px;
+}
+
+#btnCalculer:active {
+  position: relative;
+  top: 1px;
+}
+
+#totalTip {
+  display: inline-block;
+  width: 180px;
+  background-color: #17a2b8;
+  color: #fff;
+  font-size: 30px;
+  margin-top: 0px;
+  text-align: center;
+  margin-left: 30px;
+  padding: 10px;
+  line-height: 30px;
+  border-radius: 10px;  
+  display: none;
+}
+
+#totalTip:before {
+  content: "Montant du Tip";
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+
+#totalTip sup {
+  font-size: 20px;
+  top: -18px;
+  color: rgba(253, 44, 44, 0.877);
+}
+
+#totalTip small {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#txtPersonnesSlider .slider-selection {
+  background: #0985e3e5;
+}
+
+#txtPersonnesSlider{
+  margin-left: 30px;
+  width: 34%;
+}
+
+#tip{
+  color: rgba(253, 44, 44, 0.877);
+}
+
+#error-message-qual-icon,
+#error-message-mont-icon,
+#error-message-nobr-icon
+{
+  color: rgba(253, 44, 44, 0.877);
+  margin-left: 5px;
+}
+
+/* .hide
+{
+  display: none;
+}
+
+.show
+{
+  display: inline-block;
+} */
+
+div.tooltip.in{
+  opacity: .9;
+}
+
+
+
